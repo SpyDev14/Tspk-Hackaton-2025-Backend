@@ -267,7 +267,8 @@ class TelegramSendingChannel(models.Model):
 	def send_message(
 			self, text: str, *,
 			parse_mode: ParseMode = ParseMode.HTML,
-			timeout: float | None = None):
+			timeout: float | None = None,
+			raise_for_status: bool = False):
 		"""
 		**ВНИМАНИЕ!!!** Блокирует поток выполнения!
 
@@ -284,12 +285,15 @@ class TelegramSendingChannel(models.Model):
 		}
 
 		response = requests.post(url, json = payload, timeout = timeout)
-		response.raise_for_status()
+		if raise_for_status:
+			response.raise_for_status()
+		return response
 
 	def try_send_message(
 			self, text: str, *,
 			parse_mode: ParseMode = ParseMode.HTML,
-			timeout: float | None = None
+			timeout: float | None = None,
+			raise_for_status: bool = False,
 		) -> tuple[bool, Exception | None]:
 		"""
 		**ВНИМАНИЕ!!!** Блокирует поток выполнения.<br>
@@ -299,7 +303,12 @@ class TelegramSendingChannel(models.Model):
 		# Не возвращаем response т.к при ошибке он будет в ex (если ошибка связана с сетью),
 		# а при успехе он нам и не нужен
 		try:
-			self.send_message(text = text, parse_mode = parse_mode, timeout = timeout)
+			self.send_message(
+				text = text,
+				parse_mode = parse_mode,
+				timeout = timeout,
+				raise_for_status = raise_for_status,
+			)
 			return (True, None)
 		except Exception as ex:
 			return (False, ex)

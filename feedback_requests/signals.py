@@ -2,10 +2,12 @@ import logging, time
 
 from django.db.models.signals 	import post_save
 from django.template.loader 	import render_to_string
+from django.core.mail 			import send_mail
 from django.dispatch 			import receiver
 
 from requests import HTTPError, status_codes
 
+from business.models.singletons import BusinessConfig
 from feedback_requests.config 	import TELEGRAM_SEND_NOTIFICATIONS
 from feedback_requests.models 	import FeedbackRequest
 from core.models.general 		import TelegramSendingChannel
@@ -20,9 +22,9 @@ def send_new_request_notification_into_telegram(sender, instance: FeedbackReques
 		return
 
 	specialization = TelegramSendingChannel.Specialization.NEW_REQUEST_NOTIFICATIONS
-	telegram_sending_channel = TelegramSendingChannel.get_by_specialization(specialization)
+	channel = TelegramSendingChannel.get_by_specialization(specialization)
 
-	if not telegram_sending_channel:
+	if not channel:
 		return
 
 	message = render_to_string(
@@ -33,18 +35,15 @@ def send_new_request_notification_into_telegram(sender, instance: FeedbackReques
 	error_message: str = ""
 	for _ in range(0, TELEGRAM_SEND_NOTIFICATIONS.ATTEMPTS_COUNT):
 		# Эта функция будет выполнятся в отдельном потоке, так что всё путём
-		success, ex = telegram_sending_channel.try_send_message(message)
+		success, ex = channel.try_send_message(message, raise_for_status = True)
 
 		if success:
-			# Завершаем работу функции
-			instance.seen = True
-			instance.save()
+			instance.mark_as_seen()
 			_logger.debug(f"Успешно отправил уведомление о новой заявке в телеграмм.")
 			return
 
-
 		error_message = str(ex)
-		# Это ошибка статуса (raise_for_status())
+		# Ошибка статуса (raise_for_status())
 		if isinstance(ex, HTTPError):
 			error_message = f"{ex.response.status_code}: {ex.response.json()['description']}"
 
@@ -66,3 +65,32 @@ def send_new_request_notification_into_telegram(sender, instance: FeedbackReques
 
 	# Все ошибки будут обработаны тут
 	_logger.error(f"Не смог отправить уведомление о создании новой заявки в телеграм: {error_message}")
+
+@receiver(post_save, sender = FeedbackRequest)
+def send_new_request_notification_by_telegram(sender, instance: FeedbackRequest, created, **kwargs):
+	if not created:
+		return
+	# Делалось второпях
+	message = f"""
+Новая заявка!
+Заявитель: {instance.requestener_name}
+Номер телефона: {instance.phone_number}
+""".lstrip()
+
+	if instance.email:
+		message += f"Почта: {instance.email}\n"
+
+	if instance.comment:
+		message += f"Комментарий:\n{instance.comment}\n"
+
+	# TODO: Сделать через regex
+	to: list[str] = BusinessConfig.get_solo().new_feedback_requests_receiver_emails.replace(' ', '').replace('\n', '').replace('\t', '').split(',')
+	send_mail(
+		subject=f'Новая заявка от: {instance.created_at.strftime('%d/%m/%Y, %H:%M:%S')}',
+		message=message,
+		from_email='noreply@mysite.com',
+		recipient_list = to,
+		# html_message=True,
+	)
+
+	instance.mark_as_seen()

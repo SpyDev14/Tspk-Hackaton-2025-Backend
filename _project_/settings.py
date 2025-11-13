@@ -178,7 +178,7 @@ CACHES = {
 	}
 }
 
-# Logging
+# MARK: Logging
 # Кстати, тут можно было использовать := оператор, но это было бы тяжелочитаемо
 _logs_path = Path(env.str('LOGS_DIR', 'logs'))
 LOGS_DIR = (
@@ -283,6 +283,13 @@ if not 'runserver' in sys.argv:
 # Настройка предупреждений
 SILENCED_SYSTEM_CHECKS = ['ckeditor.W001']
 
+# MARK: EMail-s
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = env.str('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env.str('EMAIL_HOST_PASSWORD')
 
 # MARK: Project
 DEFAULT_MODEL_ADMIN_CLASSES = {
