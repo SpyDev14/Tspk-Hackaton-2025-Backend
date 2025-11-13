@@ -9,6 +9,7 @@ class BusinessConfig(SingletonModel):
 		default='vlad.buklovsky@gmail.com',
 		help_text='Почты тех, кому будет отправлено уведомление о новой заявке, раздёлённые знаком запятой ",".'
 	)
+	debug_email_sending_enabled = models.BooleanField(default=False)
 
 	class Meta:
 		verbose_name = '🛠 | Конфиг бизнес параметров'

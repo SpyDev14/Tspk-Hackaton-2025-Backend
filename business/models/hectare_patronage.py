@@ -4,23 +4,26 @@ from django.db 				import models
 from core.models.bases import OrderedModel, UniqueNamedModel
 
 
-class HectareLotManager(models.Manager):
+class HectarePatronageBonus(UniqueNamedModel, OrderedModel):
+	class Meta(OrderedModel.Meta):
+		verbose_name = 'бонус'
+		verbose_name_plural = 'бонусы шефства над гектарами'
+
+class HectarePatronageManager(models.Manager):
 	def prefetched(self):
 		self.prefetch_related('bonuses')
 
-class HectarePatronage(OrderedModel):
-	def __init__(self, *args, **kwargs):
-		super().__init__(*args, **kwargs)
-		self.bonuses: models.Manager[HectarePatronageBonus]
-
+class HectarePatronage(models.Model):
 	# Без дробной
 	hectares = models.PositiveSmallIntegerField('Количество гектар', unique=True,
 		default=1, validators=[MinValueValidator(1)])
 	price_in_thousands = models.PositiveSmallIntegerField('Цена в тысячах',
 		default=25, validators=[MinValueValidator(1)])
+	bonuses = models.ManyToManyField(HectarePatronageBonus, verbose_name='Бонусы')
 	summary = models.TextField('Краткое описание', max_length=256)
 
-	class Meta(OrderedModel.Meta):
+	class Meta:
+		ordering = ['hectares']
 		verbose_name = 'шефство гектара'
 		verbose_name_plural = 'варианты шефства гектаров'
 
@@ -42,13 +45,3 @@ class HectarePatronage(OrderedModel):
 		elif 2 <= last_digit <= 4:
 			return 'гектара'
 		else: return 'гектаров'
-
-
-# TODO: Переделать! Добавить модель бонуса, а эту сделать связующей
-class HectarePatronageBonus(UniqueNamedModel, OrderedModel):
-	# Через FK вместо M2M для ordering в админке
-	service = models.ForeignKey(HectarePatronage, models.CASCADE, related_name = 'bonuses')
-
-	class Meta(OrderedModel.Meta):
-		verbose_name = 'бонус'
-		verbose_name_plural = 'бонусы'

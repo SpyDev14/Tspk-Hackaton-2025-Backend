@@ -1,5 +1,191 @@
-{% extends 'business/bases/rich_info_page.html' %}
+{% extends "base.html" %}
 
-{% for a in last_articles %}
-	{{a.name}}
-{% endfor %}
+{% block content %}
+   <table class="full">
+       <thead>
+           <tr>
+               <th>Параметр</th>
+               <th>Значение</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr>
+               <td>Site Name</td>
+               <td>{{ global.site_settings.site_name }}</td>
+           </tr>
+           <tr>
+               <td>Header Page: For Companies</td>
+               <td><a href="{{ global.pages.for_companies.get_absolute_url }}">{{ global.pages.for_companies.name }}</a></td>
+           </tr>
+           <tr>
+               <td>Header Page: Grove of Glory</td>
+               <td><a href="{{ global.pages.grove_of_glory.get_absolute_url }}">{{ global.pages.grove_of_glory.name }}</a></td>
+           </tr>
+           <tr>
+               <td>Page Content</td>
+               <td>{% render_as_template page.content %}</td>
+           </tr>
+           <tr>
+               <td>H1 (Main)</td>
+               <td>{{ page.get_h1 }}</td>
+           </tr>
+           <tr>
+               <td>H1 (Part 2)</td>
+               <td>{{ page.extra_context.h1_part2 }}</td>
+           </tr>
+           <tr>
+               <td>H1 (Part 3)</td>
+               <td>{{ page.extra_context.h1_part3 }}</td>
+           </tr>
+		</tr>
+		<tr>
+			<td>Заголовок видео</td>
+			<td>{{ page.extra_context.video_title }}</td>
+		</tr>
+		   <tr>
+               <td>Видео</td>
+               <td>
+				<a href="{{ page.extra_context.video_url }}"><video src="{{ page.extra_context.video_url }}"></video></a>
+			</td>
+           <tr>
+               <td>Statistics</td>
+               <td>(Data not explicitly rendered in snippet)</td>
+           </tr>
+           <tr>
+               <td>Participation Items</td>
+               <td>
+                   {% for participation in participations %}
+                       <div><strong>Item {{ loop.index }}:</strong> {{ participation.text }}</div>
+                   {% endfor %}
+               </td>
+           </tr>
+           <tr>
+               <td>Services</td>
+               <td>
+                   {% for service in services %}
+                       <div>
+                           <strong>Service {{ loop.index }}:</strong><br>
+                           Order: {{ service.order }}<br>
+                           Name: {{ service.name }}<br>
+                           Image URL: {{ service.get_image_url }}<br>
+                           Summary: {{ service.summary }}
+                       </div>
+                       {% if not loop.last %}<hr>{% endif %}
+                   {% endfor %}
+               </td>
+           </tr>
+           <tr>
+               <td>Patronages</td>
+               <td>
+                   {% for patronage in patronages %}
+                       <div>
+                           <strong>Patronage {{ loop.index }}:</strong><br>
+                           Order: {{ patronage.order }}<br>
+                           Hectares: {{ patronage.hectares }}<br>
+                           Price (in thousands): {{ patronage.price_in_thousands }}<br>
+                           Summary: {{ patronage.summary }}
+                       </div>
+                       {% if not loop.last %}<hr>{% endif %}
+                   {% endfor %}
+               </td>
+           </tr>
+           <tr>
+               <td>Planting History Articles</td>
+               <td>
+                   {% for article in articles %}
+                       <div>
+                           <strong>Article {{ loop.index }}:</strong><br>
+                           Image URL: {{ article.get_image_url }}<br>
+                           H1: {{ article.get_h1 }}<br>
+                           Summary: {{ article.summary }}
+                       </div>
+                       {% if not loop.last %}<hr>{% endif %}
+                   {% endfor %}
+               </td>
+           </tr>
+           <tr>
+               <td>How It Works (General)</td>
+               <td>
+                   {% for hiw in hiws %}
+                       <div><strong>Item {{ loop.index }}:</strong> {{ hiw.text }}</div>
+                   {% endfor %}
+               </td>
+           </tr>
+           <tr>
+               <td>How It Works (Companies)</td>
+               <td>
+                   {% for hiw in hiws_companies %}
+                       <div><strong>Item {{ loop.index }}:</strong> {{ hiw.text }}</div>
+
+                   {% endfor %}
+               </td>
+           </tr>
+           <tr>
+               <td>How It Works (Familiars)</td>
+               <td>
+                   {% for hiw in hiws_familiars %}
+                       <div><strong>Item {{ loop.index }}:</strong> {{ hiw.text }}</div>
+                   {% endfor %}
+               </td>
+           </tr>
+           <tr>
+               <td>Map Coordinates</td>
+               <td>{{ company_info.map_coordinates }}</td>
+           </tr>
+           <tr>
+               <td>Company Email</td>
+               <td>{{ company_info.email }}</td>
+           </tr>
+           <tr>
+               <td>Company Phone Number</td>
+               <td>{{ company_info.phone_number }}</td>
+           </tr>
+           <tr>
+               <td>Partners</td>
+               <td>
+                   {% for partner in partners %}
+                       <div>
+                           <strong>Partner {{ loop.index }}:</strong><br>
+                           Order: {{ partner.order }}<br>
+                           Name: {{ partner.name }}<br>
+                           SVG Code: {{ partner.svg_code }}
+                       </div>
+                       {% if not loop.last %}<hr>{% endif %}
+                   {% endfor %}
+               </td>
+           </tr>
+           <tr>
+               <td>Footer Page: Services</td>
+               <td><a href="{{ global.pages.services.get_absolute_url }}">{{ global.pages.pages.name }}</a></td>
+           </tr>
+           <tr>
+               <td>Footer Page: Planting History</td>
+               <td><a href="{{ global.pages.planting_history.get_absolute_url }}">{{ global.pages.planting_history.name }}</a></td>
+           </tr>
+           <tr>
+               <td>Footer Page: Grove of Glory</td>
+               <td><a href="{{ global.pages.grove_of_glory.get_absolute_url }}">{{ global.pages.grove_of_glory.name }}</a></td>
+           </tr>
+           <tr>
+               <td>Footer Page: For Companies</td>
+               <td><a href="{{ global.pages.for_companies.get_absolute_url }}">{{ global.pages.for_companies.name }}</a></td>
+           </tr>
+           <tr>
+               <td>Footer Page: Contacts</td>
+               <td><a href="{{ global.pages.contacts.get_absolute_url }}">{{ global.pages.contacts.name }}</a></td>
+           </tr>
+           <tr>
+               <td>Legal Page: Terms of Use</td>
+               <td><a href="{{ global.pages.terms_of_use.get_absolute_url }}">{{ global.pages.terms_of_use.name }}</a></td>
+           </tr>
+           <tr>
+               <td>Legal Page: Privacy Policy</td>
+               <td><a href="{{ global.pages.privacy_policy.get_absolute_url }}">{{ global.pages.privacy_policy.name }}</a></td>
+           </tr>
+       </tbody>
+   </table>
+
+	<div style="display: flex; margin-top: 1rem;">
+		{% include 'components/feedback_request_form.html' %}
+	</div>
+{% endblock %}

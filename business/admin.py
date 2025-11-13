@@ -14,12 +14,22 @@ registrator = AdminModelRegistrator(
 
 # FIXME: Исправить exclude_inline_model
 # @registrator.exclude_inline_model
-registrator.exclude_model(models.HectarePatronageBonus)
-class HectarePatronageBonusInline(DynamicExtraMixin, SortableTabularInline):
-	model = models.HectarePatronageBonus
+# registrator.exclude_model(models.HectarePatronageBonus)
+# class HectarePatronageBonusInline(DynamicExtraMixin, SortableTabularInline):
+# 	model = models.HectarePatronageBonus
 
-@registrator.set_for_model(models.HectarePatronage)
-class HectarePatronageAdmin(OrderedModelAdmin):
-	inlines = [HectarePatronageBonusInline]
+# @registrator.set_for_model(models.HectarePatronage)
+# class HectarePatronageAdmin(OrderedModelAdmin):
+# 	inlines = [HectarePatronageBonusInline]
+
+@registrator.set_for_model(models.HectarePatronageBonus)
+class HectarePatronageBonusAdmin(OrderedModelAdmin):
+	list_display = ['name', 'edit']
+	list_editable = ['name']
+	list_display_links = ['edit']
+
+	def edit(*args):
+		return '[Редактировать]'
+	edit.short_description = models.HectarePatronageBonus._meta.verbose_name
 
 registrator.register()
