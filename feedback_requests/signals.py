@@ -70,6 +70,8 @@ def send_new_request_notification_into_telegram(sender, instance: FeedbackReques
 def send_new_request_notification_by_telegram(sender, instance: FeedbackRequest, created, **kwargs):
 	if not created:
 		return
+	if not BusinessConfig.get_solo().debug_email_sending_enabled:
+		return
 	# Делалось второпях
 	message = f"""
 Новая заявка!

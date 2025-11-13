@@ -1,74 +1,1774 @@
 [
-	{
-		"model": "core.sitesettings",
-		"pk": 1,
-		"fields": {
-			"favicon": "icon.png",
-			"robots_txt_content": "",
-			"head_script": "",
-			"site_name": "Dev Site"
-		}
-	},
-	{
-		"model": "core.companyinfo",
-		"pk": 1,
-		"fields": {
-			"first_phone_number": "+79018022072",
-			"secondary_phone_number": "+79397099882",
-			"email": "vlad.buklovsky@yandex.ru",
-			"addres": "Офицерская 2Г",
-			"work_time_text": "с 8:00 до 18:00",
-			"map_coordinates": "53.556350, 49.216210"
-		}
-	},
-	{
-		"model": "core.page",
-		"pk": 1,
-		"fields": {
-			"name": "Главная",
-			"slug": "index",
-			"h1": "Иди на завод!",
-			"html_title": "Главная",
-			"html_description": "",
-			"is_generic_page": false,
-			"template_name": "",
-			"url_name": "index",
-			"content": "<p><strong>Решился &ndash; и пошёл!</strong>&nbsp;Не оглядываясь, без лишних мыслей. И знаете?&nbsp;<strong>Совершенно НИ О ЧЁМ не жалею!</strong>&nbsp;Это труд, это пот, это реальность &ndash; и это круто! Пусть этот сайт и не про заводскую романтику, но сам мой поступок, моя решимость &ndash; вот о чём стоит кричать!&nbsp;<strong>Хватит искать отмазки! Пора брать ответственность! Забудь про диван &ndash; а ну, подъем! На завод!</strong>&nbsp;Там ждут дела и результат!</p>",
-			"last_modified_time": "2025-09-26"
-		}
-	},
-	{
-		"model": "core.page",
-		"pk": 2,
-		"fields": {
-			"name": "Заявка: успешно",
-			"slug": "success",
-			"h1": "Успешно!",
-			"html_title": "Успешно!",
-			"html_description": "",
-			"is_generic_page": true,
-			"template_name": "",
-			"url_name": "",
-			"content": "<p>Вы успешно оставили заявку на обратную связь! Наши специалисты свяжутся с вами в ближайшее время.</p>",
-			"last_modified_time": "2025-09-26"
-		}
-	},
-	{
-		"model": "core.extracontext",
-		"pk": 1,
-		"fields": {
-			"key": "main_image_url",
-			"value": "https://ecvdo.ru/assets/images/report/rabotnik(1).jpg",
-			"page": 1
-		}
-	},
-	{
-		"model": "core.extracontext",
-		"pk": 2,
-		"fields": {
-			"key": "something",
-			"value": "Что-то",
-			"page": null
-		}
-	}
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-11-12T16:55:27.474Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Главная",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0414\\u043e\\u043f\\u043e\\u043b\\u043d\\u0438\\u0442\\u0435\\u043b\\u044c\\u043d\\u044b\\u0439 \\u043a\\u043e\\u043d\\u0442\\u0435\\u043a\\u0441\\u0442\", \"object\": \"video_url for page \\\"\\u0413\\u043b\\u0430\\u0432\\u043d\\u0430\\u044f\\\"\"}}, {\"added\": {\"name\": \"\\u0414\\u043e\\u043f\\u043e\\u043b\\u043d\\u0438\\u0442\\u0435\\u043b\\u044c\\u043d\\u044b\\u0439 \\u043a\\u043e\\u043d\\u0442\\u0435\\u043a\\u0441\\u0442\", \"object\": \"video_title for page \\\"\\u0413\\u043b\\u0430\\u0432\\u043d\\u0430\\u044f\\\"\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-11-12T17:00:36.735Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "Услуги (заглушка)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-11-12T17:08:58.730Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Уведомления о новых заявках",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-11-12T17:14:05.557Z",
+        "user": 1,
+        "content_type": 21,
+        "object_id": "1",
+        "object_repr": "Заявка от Тест +78005553535",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-11-12T17:27:39.268Z",
+        "user": 1,
+        "content_type": 21,
+        "object_id": "2",
+        "object_repr": "Заявка от Фокусник +78005553535",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2025-11-12T17:30:27.759Z",
+        "user": 1,
+        "content_type": 21,
+        "object_id": "3",
+        "object_repr": "Заявка от Без комментария +79879320435",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2025-11-12T17:54:00.435Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "⚙ | Настройки сайта",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u043c\\u043e\\u0435 Robots.txt\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2025-11-12T17:58:08.896Z",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "1",
+        "object_repr": "CNN",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2025-11-13T09:44:40.860Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "1",
+        "object_repr": "1 Гектар",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0431\\u043e\\u043d\\u0443\\u0441\", \"object\": \"\\u041a\\u0420\\u0423\\u0422\\u041e\\u0419 \\u0411\\u041e\\u041d\\u0423\\u0421\"}}, {\"added\": {\"name\": \"\\u0431\\u043e\\u043d\\u0443\\u0441\", \"object\": \"\\u0411\\u043e\\u043d\\u0443\\u0441 2\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2025-11-13T12:46:20.295Z",
+        "user": 1,
+        "content_type": 21,
+        "object_id": "4",
+        "object_repr": "Заявка от Тест почты +78005553535",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2025-11-13T12:58:21.128Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "1",
+        "object_repr": "BusinessConfig object (1)",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2025-11-13T12:59:32.442Z",
+        "user": 1,
+        "content_type": 21,
+        "object_id": "5",
+        "object_repr": "Заявка от Ntcn2 +78005553535",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2025-11-13T13:01:02.087Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Уведомления о новых заявках",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"ID \\u0447\\u0430\\u0442\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2025-11-13T13:02:14.025Z",
+        "user": 1,
+        "content_type": 21,
+        "object_id": "6",
+        "object_repr": "Заявка от Тест почты2 +78005553535",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2025-11-13T19:10:08.361Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Политика конфиденциальности",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2025-11-13T19:21:57.072Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "1",
+        "object_repr": "Сертификат",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2025-11-13T19:22:01.954Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "2",
+        "object_repr": "Фотоотчёт",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2025-11-13T19:22:05.101Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "2",
+        "object_repr": "Фотоотчёт",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2025-11-13T19:22:09.142Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "2",
+        "object_repr": "Фотоотчёт",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2025-11-13T19:22:14.796Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "3",
+        "object_repr": "Знак в офис",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2025-11-13T19:23:02.185Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "1",
+        "object_repr": "1 Гектар",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0411\\u043e\\u043d\\u0443\\u0441\\u044b\", \"\\u041a\\u0440\\u0430\\u0442\\u043a\\u043e\\u0435 \\u043e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2025-11-13T19:23:25.012Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "10 Гектаров",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2025-11-13T19:23:44.808Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "100 Гектаров",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2025-11-13T19:33:03.366Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "localhost:8000",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Domain name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2025-11-13T19:33:47.188Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Пол. конфиденциальности",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\", \"H1 \\u0417\\u0430\\u0433\\u043e\\u043b\\u043e\\u0432\\u043e\\u043a\", \"HTML Title\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2025-11-13T19:34:20.142Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Конфиденциальность",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\", \"HTML Title\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2025-11-13T19:41:06.874Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "Для компаний",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2025-11-13T19:42:01.719Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "Условия пользования",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\", \"Slug\", \"HTML Title\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2025-11-13T19:42:25.622Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "Условия пользования",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u043d\\u0442\\u0435\\u043d\\u0442\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2025-11-13T19:49:19.244Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "5",
+        "object_repr": "Роща славы",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2025-11-13T19:50:03.771Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Главная",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u043d\\u0442\\u0435\\u043d\\u0442\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2025-11-13T20:00:52.276Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "Успешно",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2025-11-13T20:01:43.426Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "Уведомления о новых заявках",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"ID \\u0447\\u0430\\u0442\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2025-11-13T20:04:50.912Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Главная",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u043d\\u0442\\u0435\\u043d\\u0442\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2025-11-13T20:08:34.091Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Главная",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"H1 \\u0417\\u0430\\u0433\\u043e\\u043b\\u043e\\u0432\\u043e\\u043a\"]}}, {\"added\": {\"name\": \"\\u0414\\u043e\\u043f\\u043e\\u043b\\u043d\\u0438\\u0442\\u0435\\u043b\\u044c\\u043d\\u044b\\u0439 \\u043a\\u043e\\u043d\\u0442\\u0435\\u043a\\u0441\\u0442\", \"object\": \"h1_part2 for page \\\"\\u0413\\u043b\\u0430\\u0432\\u043d\\u0430\\u044f\\\"\"}}, {\"added\": {\"name\": \"\\u0414\\u043e\\u043f\\u043e\\u043b\\u043d\\u0438\\u0442\\u0435\\u043b\\u044c\\u043d\\u044b\\u0439 \\u043a\\u043e\\u043d\\u0442\\u0435\\u043a\\u0441\\u0442\", \"object\": \"h1_part3 for page \\\"\\u0413\\u043b\\u0430\\u0432\\u043d\\u0430\\u044f\\\"\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2025-11-13T20:14:21.597Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Главная",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u0414\\u043e\\u043f\\u043e\\u043b\\u043d\\u0438\\u0442\\u0435\\u043b\\u044c\\u043d\\u044b\\u0439 \\u043a\\u043e\\u043d\\u0442\\u0435\\u043a\\u0441\\u0442\", \"object\": \"video_url for page \\\"\\u0413\\u043b\\u0430\\u0432\\u043d\\u0430\\u044f\\\"\", \"fields\": [\"\\u0417\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2025-11-13T20:16:03.757Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Главная",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2025-11-13T20:32:31.283Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "7",
+        "object_repr": "Для компаний",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2025-11-13T20:33:44.044Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "Услуги (заглушка)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2025-11-13T20:35:01.112Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "5",
+        "object_repr": "Роща славы",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u043d\\u0442\\u0435\\u043d\\u0442\"]}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add site",
+        "content_type": 7,
+        "codename": "add_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change site",
+        "content_type": 7,
+        "codename": "change_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete site",
+        "content_type": 7,
+        "codename": "delete_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view site",
+        "content_type": 7,
+        "codename": "view_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add history entry",
+        "content_type": 8,
+        "codename": "add_historyentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change history entry",
+        "content_type": 8,
+        "codename": "change_historyentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete history entry",
+        "content_type": 8,
+        "codename": "delete_historyentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view history entry",
+        "content_type": 8,
+        "codename": "view_historyentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add 📑 | Информация о компании",
+        "content_type": 9,
+        "codename": "add_companyinfo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change 📑 | Информация о компании",
+        "content_type": 9,
+        "codename": "change_companyinfo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete 📑 | Информация о компании",
+        "content_type": 9,
+        "codename": "delete_companyinfo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view 📑 | Информация о компании",
+        "content_type": 9,
+        "codename": "view_companyinfo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add страница",
+        "content_type": 10,
+        "codename": "add_page"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change страница",
+        "content_type": 10,
+        "codename": "change_page"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete страница",
+        "content_type": 10,
+        "codename": "delete_page"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view страница",
+        "content_type": 10,
+        "codename": "view_page"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add ⚙ | Настройки сайта",
+        "content_type": 11,
+        "codename": "add_sitesettings"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change ⚙ | Настройки сайта",
+        "content_type": 11,
+        "codename": "change_sitesettings"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete ⚙ | Настройки сайта",
+        "content_type": 11,
+        "codename": "delete_sitesettings"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view ⚙ | Настройки сайта",
+        "content_type": 11,
+        "codename": "view_sitesettings"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add Канал отправки сообщений в Telegram",
+        "content_type": 12,
+        "codename": "add_telegramsendingchannel"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change Канал отправки сообщений в Telegram",
+        "content_type": 12,
+        "codename": "change_telegramsendingchannel"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete Канал отправки сообщений в Telegram",
+        "content_type": 12,
+        "codename": "delete_telegramsendingchannel"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view Канал отправки сообщений в Telegram",
+        "content_type": 12,
+        "codename": "view_telegramsendingchannel"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add Дополнительный контекст",
+        "content_type": 13,
+        "codename": "add_extracontext"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change Дополнительный контекст",
+        "content_type": 13,
+        "codename": "change_extracontext"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete Дополнительный контекст",
+        "content_type": 13,
+        "codename": "delete_extracontext"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view Дополнительный контекст",
+        "content_type": 13,
+        "codename": "view_extracontext"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add Статья",
+        "content_type": 14,
+        "codename": "add_article"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change Статья",
+        "content_type": 14,
+        "codename": "change_article"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete Статья",
+        "content_type": 14,
+        "codename": "delete_article"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view Статья",
+        "content_type": 14,
+        "codename": "view_article"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add 🛠 | Конфиг бизнес параметров",
+        "content_type": 15,
+        "codename": "add_businessconfig"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change 🛠 | Конфиг бизнес параметров",
+        "content_type": 15,
+        "codename": "change_businessconfig"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete 🛠 | Конфиг бизнес параметров",
+        "content_type": 15,
+        "codename": "delete_businessconfig"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view 🛠 | Конфиг бизнес параметров",
+        "content_type": 15,
+        "codename": "view_businessconfig"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add варианты шефства гектаров",
+        "content_type": 16,
+        "codename": "add_hectarepatronage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change варианты шефства гектаров",
+        "content_type": 16,
+        "codename": "change_hectarepatronage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete варианты шефства гектаров",
+        "content_type": 16,
+        "codename": "delete_hectarepatronage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view варианты шефства гектаров",
+        "content_type": 16,
+        "codename": "view_hectarepatronage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add элемент \"Как это работает\"",
+        "content_type": 17,
+        "codename": "add_howitsworkitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change элемент \"Как это работает\"",
+        "content_type": 17,
+        "codename": "change_howitsworkitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete элемент \"Как это работает\"",
+        "content_type": 17,
+        "codename": "delete_howitsworkitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view элемент \"Как это работает\"",
+        "content_type": 17,
+        "codename": "view_howitsworkitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+        "name": "Can add партнёр",
+        "content_type": 18,
+        "codename": "add_parthners"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Can change партнёр",
+        "content_type": 18,
+        "codename": "change_parthners"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "Can delete партнёр",
+        "content_type": 18,
+        "codename": "delete_parthners"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Can view партнёр",
+        "content_type": 18,
+        "codename": "view_parthners"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+        "name": "Can add услуги",
+        "content_type": 19,
+        "codename": "add_service"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+        "name": "Can change услуги",
+        "content_type": 19,
+        "codename": "change_service"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+        "name": "Can delete услуги",
+        "content_type": 19,
+        "codename": "delete_service"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+        "name": "Can view услуги",
+        "content_type": 19,
+        "codename": "view_service"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+        "name": "Can add бонус",
+        "content_type": 20,
+        "codename": "add_hectarepatronagebonus"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+        "name": "Can change бонус",
+        "content_type": 20,
+        "codename": "change_hectarepatronagebonus"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+        "name": "Can delete бонус",
+        "content_type": 20,
+        "codename": "delete_hectarepatronagebonus"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+        "name": "Can view бонус",
+        "content_type": 20,
+        "codename": "view_hectarepatronagebonus"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+        "name": "Can add Заявка на обратную связь",
+        "content_type": 21,
+        "codename": "add_feedbackrequest"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+        "name": "Can change Заявка на обратную связь",
+        "content_type": 21,
+        "codename": "change_feedbackrequest"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+        "name": "Can delete Заявка на обратную связь",
+        "content_type": 21,
+        "codename": "delete_feedbackrequest"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+        "name": "Can view Заявка на обратную связь",
+        "content_type": 21,
+        "codename": "view_feedbackrequest"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$JfQ7pQyhETauZjtnAa7oww$1lGwvneC/az87YwMFQ6fOm5iGv1SepL5pj1B1qifgR8=",
+        "last_login": "2025-11-13T12:40:26.265Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-12T16:50:32.507Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "sites",
+        "model": "site"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "debug_toolbar",
+        "model": "historyentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "core",
+        "model": "companyinfo"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "core",
+        "model": "page"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "core",
+        "model": "sitesettings"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "core",
+        "model": "telegramsendingchannel"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "core",
+        "model": "extracontext"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "business",
+        "model": "article"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "business",
+        "model": "businessconfig"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "business",
+        "model": "hectarepatronage"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+        "app_label": "business",
+        "model": "howitsworkitem"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+        "app_label": "business",
+        "model": "parthners"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+        "app_label": "business",
+        "model": "service"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+        "app_label": "business",
+        "model": "hectarepatronagebonus"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 21,
+    "fields": {
+        "app_label": "feedback_requests",
+        "model": "feedbackrequest"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "pn6md6udwz0a6f1d5kwhi9kon5d0ls88",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP_C2RCRBcSjd99Alt1FqoYmpT0Z_25IetDrzGTeKuG21rR1WdLE6qKMOvyyjPSUNgQ_sN1nTXNblynrkejddn2bWV7Xvf0bVOx1bL2x4BnQhAgnC5YzOD6ijyVLMc4bCsGDgAg5IY9oCwhFYieZzk59vtAeOGY:1vJE3P:7wzf2wiJxz-QRQ9_dkhWcLzcLSIS3WmQA_voNFGUyYo",
+        "expire_date": "2025-11-26T16:50:43.186Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "skujxdkw082xwc3z4rmjjz1kg66ewhsq",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP_C2RCRBcSjd99Alt1FqoYmpT0Z_25IetDrzGTeKuG21rR1WdLE6qKMOvyyjPSUNgQ_sN1nTXNblynrkejddn2bWV7Xvf0bVOx1bL2x4BnQhAgnC5YzOD6ijyVLMc4bCsGDgAg5IY9oCwhFYieZzk59vtAeOGY:1vJWck:CM4EYhbSgtarASV9eP0pjlz0fBBb8rz2fQkm7MmBBYg",
+        "expire_date": "2025-11-27T12:40:26.277Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "wn356813d4j2rnhcppva3xaaxg2l5j30",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP_C2RCRBcSjd99Alt1FqoYmpT0Z_25IetDrzGTeKuG21rR1WdLE6qKMOvyyjPSUNgQ_sN1nTXNblynrkejddn2bWV7Xvf0bVOx1bL2x4BnQhAgnC5YzOD6ijyVLMc4bCsGDgAg5IY9oCwhFYieZzk59vtAeOGY:1vJEEr:Lb9kbj2maHyx6tmEAb0fh_fGToxGEmAIIeoKiOM5fmk",
+        "expire_date": "2025-11-26T17:02:33.860Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "wqmioawi23ucn80onbzvxr1yluhwxcme",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP_C2RCRBcSjd99Alt1FqoYmpT0Z_25IetDrzGTeKuG21rR1WdLE6qKMOvyyjPSUNgQ_sN1nTXNblynrkejddn2bWV7Xvf0bVOx1bL2x4BnQhAgnC5YzOD6ijyVLMc4bCsGDgAg5IY9oCwhFYieZzk59vtAeOGY:1vJTsC:NWtvbaTT5YzLpwY6vTQg0kgcNI1ApC6tkgGN6Jix-6M",
+        "expire_date": "2025-11-27T09:44:12.578Z"
+    }
+},
+{
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+        "domain": "example.com",
+        "name": "example.com"
+    }
+},
+{
+    "model": "sites.site",
+    "pk": 2,
+    "fields": {
+        "domain": "localhost:8000",
+        "name": "jhost"
+    }
+},
+{
+    "model": "core.sitesettings",
+    "pk": 1,
+    "fields": {
+        "site_name": "JBrony Site",
+        "favicon": "",
+        "robots_txt_content": "User-Agent: *\r\nDisallow: /admin/",
+        "head_script": ""
+    }
+},
+{
+    "model": "core.companyinfo",
+    "pk": 1,
+    "fields": {
+        "phone_number": "",
+        "email": "",
+        "addres": "",
+        "start_work_time": "09:00:00",
+        "end_work_time": "18:00:00",
+        "map_coordinates": ""
+    }
+},
+{
+    "model": "core.page",
+    "pk": 1,
+    "fields": {
+        "name": "Главная",
+        "slug": "index",
+        "_h1": "Покупай саженцы - сажай лес,",
+        "_html_title": "",
+        "add_sitename_to_html_title": true,
+        "html_description": "",
+        "last_modified_time": "2025-11-13T20:16:03.754Z",
+        "order": 1,
+        "add_to_header": true,
+        "content": "<div>\r\n<div>(Контент, знаечние подставляется чреез шаблоннй рендеринг)<br>Название сайта: <code>{{ global.site_settings.site_name }}</code></div>\r\n</div>",
+        "is_generic_page": false,
+        "url_name": "index",
+        "template_name": ""
+    }
+},
+{
+    "model": "core.page",
+    "pk": 3,
+    "fields": {
+        "name": "Конфиденциальность",
+        "slug": "privacy",
+        "_h1": "Политика конфиденциальности",
+        "_html_title": "",
+        "add_sitename_to_html_title": true,
+        "html_description": "",
+        "last_modified_time": "2025-11-13T19:34:20.140Z",
+        "order": 2,
+        "add_to_header": true,
+        "content": "<h2 style=\"font-size: 2rem;\">1.1. Общие положения</h2>\r\n<p>1.1. Мы не осуществляем сбор ваших <a href=\"http://www.it-lex.ru/usloviya_ispolzovaniya_servisa/obrazec-politiki-konfidencialnosti-2017\" target=\"_blank\" rel=\"noopener\" data-fpl-component=\"primitive\">персональных данных</a>&nbsp;с использованием Сайта.<br>1.2. Все данные, собираемые на Сайте, предоставляются и принимаются в обезличенной форме (далее &ndash; &laquo;Обезличенные данные&raquo;).<br>1.3. Обезличенные данные включают следующие сведения, которые не позволяют вас идентифицировать:<br>1.3.1. Информацию, которую вы предоставляете о себе самостоятельно с использованием онлайн-форм и программных модулей Сайта, включая имя и номер телефона и/или адрес электронной почты.<br>1.3.2. Данные, которые передаются в обезличенном виде в автоматическом режиме в зависимости от настроек используемого вами программного обеспечения.<br>1.4. Администрация вправе устанавливать требования к составу Обезличенных данных Пользователя, которые собираются использованием Сайта.<br>1.5. Если определенная информация не помечена как обязательная, ее предоставление или раскрытие осуществляется Пользователем на свое усмотрение. Одновременно вы даете информированное согласие на доступ неограниченного круга лиц к таким данным. Указанные данные становится общедоступными с момента предоставления и/или раскрытия в иной форме.<br>1.6. Администрация не осуществляет проверку достоверности предоставляемых данных и наличия у Пользователя необходимого согласия на их обработку в соответствии с настоящей Политикой, полагая, что Пользователь действует добросовестно, осмотрительно и прилагает все необходимые усилия к поддержанию такой информации в актуальном состоянии и получению всех необходимых согласий на ее использование.<br>1.7. Вы осознаете и принимаете возможность использования на Сайте программного обеспечения третьих лиц, в результате чего такие лица могут получать и передавать указанные в п.1.3 данные в обезличенном виде.</p>",
+        "is_generic_page": true,
+        "url_name": "",
+        "template_name": ""
+    }
+},
+{
+    "model": "core.page",
+    "pk": 4,
+    "fields": {
+        "name": "Условия пользования",
+        "slug": "terms-of-use",
+        "_h1": "",
+        "_html_title": "",
+        "add_sitename_to_html_title": true,
+        "html_description": "",
+        "last_modified_time": "2025-11-13T19:42:25.620Z",
+        "order": 3,
+        "add_to_header": true,
+        "content": "<h2>1. Регистрация и учетная запись</h2>\r\n<p>1.1. Для доступа к определенным функциям нашего сайта может потребоваться создание учетной записи. Вы обязуетесь предоставлять точную и полную информацию при регистрации.<br>1.2. Вы несете ответственность за сохранность своих учетных данных и обязуетесь незамедлительно уведомить нас о любом несанкционированном доступе к вашей учетной записи.</p>\r\n<h2>2. Использование сайта</h2>\r\n<p>2.1. Вы соглашаетесь использовать сайт только в законных целях и в соответствии с действующим законодательством.<br>2.2. Запрещенные действия: Запрещается:<br>2.2.1. Использовать сайт для распространения незаконного контента.<br>2.2.2. Пытаться получить несанкционированный доступ к другим учетным записям или системам.<br>2.2.3. Использовать автоматизированные системы для сбора данных с сайта.</p>\r\n<h2>3. Интеллектуальная собственность</h2>\r\n<p>3.1. Все материалы, размещенные на сайте, включая текст, изображения, графику и программное обеспечение, защищены авторскими правами и другими правами интеллектуальной собственности. Запрещается копировать, изменять или распространять эти материалы без нашего разрешения.</p>\r\n<h2>4. Ограничение ответственности</h2>\r\n<p>4.1. Мы не несем ответственности за любые прямые, косвенные, случайные или штрафные убытки, возникшие в результате использования или невозможности использования сайта. Использование сайта осуществляется на ваш собственный риск.</p>\r\n<h2>5. Применимое право</h2>\r\n<p>5.1. Данные условия пользования регулируются законодательством РФ. Все споры, возникающие в связи с использованием сайта, подлежат разрешению в судебных органах.</p>",
+        "is_generic_page": true,
+        "url_name": "",
+        "template_name": ""
+    }
+},
+{
+    "model": "core.page",
+    "pk": 5,
+    "fields": {
+        "name": "Роща славы",
+        "slug": "grove-of-glory",
+        "_h1": "",
+        "_html_title": "",
+        "add_sitename_to_html_title": true,
+        "html_description": "",
+        "last_modified_time": "2025-11-13T20:35:01.110Z",
+        "order": 4,
+        "add_to_header": true,
+        "content": "<p>Текст</p>\r\n<p>&nbsp;</p>",
+        "is_generic_page": true,
+        "url_name": "",
+        "template_name": ""
+    }
+},
+{
+    "model": "core.page",
+    "pk": 6,
+    "fields": {
+        "name": "Успешно",
+        "slug": "success",
+        "_h1": "Успешно!",
+        "_html_title": "",
+        "add_sitename_to_html_title": true,
+        "html_description": "",
+        "last_modified_time": "2025-11-13T20:00:52.274Z",
+        "order": 6,
+        "add_to_header": true,
+        "content": "<p>Ваша заявка была успешно отправлена, ожидайте, пока наш персонал свяжется с вами для дальнейшего взаимодействия!</p>",
+        "is_generic_page": true,
+        "url_name": "",
+        "template_name": ""
+    }
+},
+{
+    "model": "core.page",
+    "pk": 7,
+    "fields": {
+        "name": "Для компаний",
+        "slug": "for-companies",
+        "_h1": "Корпоративная программа посадки леса: реальный вклад в экологию вместо строчки в отчёте",
+        "_html_title": "Программы для компаний",
+        "add_sitename_to_html_title": true,
+        "html_description": "",
+        "last_modified_time": "2025-11-13T20:32:31.280Z",
+        "order": 5,
+        "add_to_header": true,
+        "content": "<article>\r\n<section>\r\n<h2>Посадка деревьев &mdash; это живое ESG-действие для вашего бизнеса</h2>\r\n<p>Наша программа позволяет компаниям сделать осознанный шаг в сторону экологической ответственности, выходящий за рамки формальных отчётов. Возьмите шефство над гектаром леса и оставьте след, который будет расти вместе с вашим бизнесом, создавая устойчивое природное наследие.</p>\r\n<p>Это уникальная возможность не просто заявить о своих ценностях, а реализовать их в конкретном действии, которое приносит измеримую пользу окружающей среде и создаёт мощный позитивный образ компании.</p>\r\n</section>\r\n<section>\r\n<h2>Ключевые преимущества для вашей компании</h2>\r\n<ul>\r\n<li><strong>Реальное ESG-воплощение:</strong> Превратите экологическую стратегию из абстрактной концепции в осязаемый результат &mdash; новый живой лес.</li>\r\n<li><strong>Эффективное сплочение команды:</strong> Совместное доброе дело объединяет коллектив, формируя корпоративный дух и общие ценности в неформальной обстановке.</li>\r\n<li><strong>Сильный имиджевый кейс:</strong> Получите мощный инфоповод для PR, соцсетей и HR-бренда, демонстрируя реальную заботу о будущем планеты.</li>\r\n</ul>\r\n</section>\r\n<section>\r\n<h2>Как проходит организация посадки леса для компаний</h2>\r\n<ol>\r\n<li><strong>Выбор формата участия.</strong> Выбирайте оптимальный для вашего бизнеса масштаб проекта &mdash; от 1 до 100 гектаров.</li>\r\n<li><strong>Консультация и подбор площадки.</strong> Наш специалист связывается с вами, чтобы обсудить детали и помочь выбрать подходящий участок для лесовосстановления.</li>\r\n<li><strong>Полная организация процесса.</strong> Мы берём на себя все организационные вопросы: инвентарь, координацию волонтёров, логистику в день мероприятия.</li>\r\n<li><strong>День посадки леса.</strong> Ваша команда выходит на выделенный участок, чтобы своими руками посадить будущий лес под руководством наших опытных кураторов.</li>\r\n<li><strong>Подтверждение вклада.</strong> После мероприятия вы получаете именной сертификат, фото- и видеоотчёт, а также точные координаты участка для возможных последующих визитов.</li>\r\n</ol>\r\n</section>\r\n<section>\r\n<h2>Форматы участия и тарифы для бизнеса</h2>\r\n<div>\r\n<h3>1 Гектар &mdash; от 100 000 ₽</h3>\r\n<p>Идеальный вариант для первого шага в экологической ответственности вашей компании. Небольшой, но ощутимый вклад в будущее, который станет началом вашего зелёного пути.</p>\r\n<p><strong>Включено:</strong> Сертификат о шефстве над участком леса.</p>\r\n</div>\r\n<div>\r\n<h3>10 Гектаров &mdash; от 500 000 ₽</h3>\r\n<p>Это уже масштабный проект, заметно меняющий ландшафт. Решение для компаний, которые стремятся расти вместе с природой и демонстрировать серьёзность своих экологических инициатив.</p>\r\n<p><strong>Включено:</strong> Сертификат + подробный фотоотчёт о посадке.</p>\r\n</div>\r\n<div>\r\n<h3>100 Гектаров &mdash; от 3 000 000 ₽</h3>\r\n<p>Знак серьёзной экологической миссии вашей компании. Вы создаёте большую самостоятельную экосистему, которую сохраняете для будущих поколений, укрепляя репутацию лидера в области устойчивого развития.</p>\r\n<p><strong>Включено:</strong> Сертификат + фотоотчёт + фирменный знак для офиса.</p>\r\n</div>\r\n</section>\r\n<section>\r\n<h2>Сделайте посадку леса частью корпоративной культуры</h2>\r\n<p>Участие в нашей программе &mdash; это не разовая акция, а инвестиция в долгосрочную репутацию, командообразование и реальное сохранение природы России. Свяжитесь с нами, чтобы выбрать формат участия и запланировать ваше корпоративное эко-событие.</p>\r\n</section>\r\n</article>",
+        "is_generic_page": true,
+        "url_name": "",
+        "template_name": ""
+    }
+},
+{
+    "model": "core.extracontext",
+    "pk": 1,
+    "fields": {
+        "key": "video_url",
+        "value": "/static/reportage.mp4",
+        "page": 1
+    }
+},
+{
+    "model": "core.extracontext",
+    "pk": 2,
+    "fields": {
+        "key": "video_title",
+        "value": "ТВ-репортаж с недавнего мероприятия",
+        "page": 1
+    }
+},
+{
+    "model": "core.extracontext",
+    "pk": 3,
+    "fields": {
+        "key": "h1_part2",
+        "value": "в который можно",
+        "page": 1
+    }
+},
+{
+    "model": "core.extracontext",
+    "pk": 4,
+    "fields": {
+        "key": "h1_part3",
+        "value": "вернуться",
+        "page": 1
+    }
+},
+{
+    "model": "core.telegramsendingchannel",
+    "pk": 1,
+    "fields": {
+        "token_env_name": "TG_NOTIFICATIONS_BOT_TOKEN",
+        "chat_id": "-4965378037",
+        "specialization": "new_request_notifications"
+    }
+},
+{
+    "model": "business.parthners",
+    "pk": 1,
+    "fields": {
+        "order": 1,
+        "name": "CNN",
+        "svg_code": "<svg width=\"200\" height=\"93\" viewBox=\"0 0 200 93\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<path d=\"M199.968 75.7095C199.968 92.9078 177.738 101.165 165.977 81.1895C165.134 79.7478 146.601 47.8295 146.601 47.8295V75.7103C146.601 92.9078 124.382 101.165 112.621 81.1895C111.767 79.7478 93.2433 47.8295 93.2433 47.8295V74.1186C93.2433 86.0503 86.1617 92.5128 75.0842 92.5128H46.0825C33.8607 92.5128 22.1394 87.6577 13.4973 79.0155C4.85511 70.3734 0 58.6521 0 46.4303C0 34.2085 4.85511 22.4872 13.4973 13.845C22.1394 5.20291 33.8607 0.347803 46.0825 0.347803H61.0375V11.4145H46.0825C41.4842 11.4145 36.9308 12.3202 32.6825 14.0799C28.4342 15.8396 24.5741 18.4188 21.3226 21.6704C18.071 24.9219 15.4918 28.782 13.7321 33.0303C11.9724 37.2786 11.0667 41.832 11.0667 46.4303C11.0667 51.0286 11.9724 55.582 13.7321 59.8303C15.4918 64.0786 18.071 67.9387 21.3226 71.1902C24.5741 74.4417 28.4342 77.021 32.6825 78.7807C36.9308 80.5404 41.4842 81.4461 46.0825 81.4461H74.8275C76.7572 81.4081 78.5974 80.6253 79.9632 79.2617C81.329 77.898 82.1147 76.0591 82.1558 74.1295V17.4595C82.1285 16.9539 82.2729 16.454 82.5657 16.041C82.8584 15.628 83.2823 15.3261 83.7683 15.1845C84.9433 14.8645 86.1825 15.5903 87.0908 17.1286L105.026 48.032C115.451 66.0095 122.299 77.8136 122.384 77.942C124.723 81.8936 128.206 82.5886 130.695 81.9045C132.117 81.506 133.367 80.6449 134.245 79.4572C135.123 78.2694 135.581 76.8229 135.545 75.3461V17.4711C135.516 16.9667 135.657 16.4671 135.945 16.0525C136.234 15.6378 136.653 15.3321 137.137 15.1845C138.301 14.8645 139.528 15.5903 140.426 17.1286L157.047 45.767L175.731 77.9736C177.557 81.0711 180.099 82.172 182.311 82.172C182.892 82.1719 183.47 82.0928 184.03 81.937C185.471 81.5495 186.74 80.6889 187.633 79.4935C188.526 78.298 188.992 76.8371 188.955 75.3453V0.348634H200L199.968 75.7095ZM66.6883 62.8386V17.1403C66.6883 -0.058035 88.9175 -8.3147 100.678 11.6711C101.532 13.1128 120.056 45.0211 120.056 45.0211V17.1395C120.056 -0.0588616 142.274 -8.31553 154.035 11.6703C154.89 13.112 173.412 45.0203 173.412 45.0203V0.346969H184.5V75.3461C184.528 75.8531 184.384 76.3546 184.091 76.7694C183.799 77.1843 183.374 77.4882 182.887 77.632C181.712 77.952 180.473 77.2261 179.565 75.6878C173.324 64.9697 167.1 54.2413 160.893 43.5028L144.272 14.8861C141.943 10.9328 138.472 10.2386 136.004 10.9111C134.582 11.3088 133.333 12.168 132.453 13.3535C131.573 14.539 131.112 15.9834 131.143 17.4595V75.3461C131.169 75.8527 131.024 76.3533 130.732 76.7677C130.44 77.1822 130.017 77.4865 129.531 77.632C128.345 77.952 127.106 77.2261 126.208 75.6878C126.048 75.4211 117.3 60.3486 108.85 45.7778C102.872 35.4674 96.8897 25.1591 90.9042 14.8528C88.5758 10.8903 85.0933 10.207 82.6042 10.8795C81.1815 11.277 79.9311 12.1358 79.0495 13.3211C78.1678 14.5063 77.7049 15.9509 77.7333 17.4278V74.0961C77.6853 74.85 77.3634 75.5604 76.8283 76.0935C76.2931 76.6267 75.5816 76.9459 74.8275 76.9911H46.0608C37.947 76.9911 30.1654 73.7679 24.4281 68.0305C18.6907 62.2932 15.4675 54.5117 15.4675 46.3978C15.4675 38.2839 18.6907 30.5024 24.4281 24.765C30.1654 19.0277 37.947 15.8045 46.0608 15.8045H61.0167V26.8711H46.1892C41.0104 26.8711 36.0437 28.9284 32.3817 32.5904C28.7198 36.2523 26.6625 41.219 26.6625 46.3978C26.6625 51.5766 28.7198 56.5433 32.3817 60.2052C36.0437 63.8672 41.0104 65.9245 46.1892 65.9245H63.6333C64.0381 65.9274 64.4394 65.8493 64.8135 65.6948C65.1876 65.5403 65.527 65.3125 65.8117 65.0247C66.0964 64.737 66.3206 64.3952 66.4712 64.0195C66.6217 63.6437 66.6956 63.2417 66.6883 62.837V62.8386Z\"/>\r\n</svg>"
+    }
+},
+{
+    "model": "business.businessconfig",
+    "pk": 1,
+    "fields": {
+        "saplings_in_hectare": 1000,
+        "new_feedback_requests_receiver_emails": "vlad.buklovsky@gmail.com",
+        "debug_email_sending_enabled": false
+    }
+},
+{
+    "model": "business.hectarepatronagebonus",
+    "pk": 1,
+    "fields": {
+        "order": 1,
+        "name": "Сертификат"
+    }
+},
+{
+    "model": "business.hectarepatronagebonus",
+    "pk": 2,
+    "fields": {
+        "order": 2,
+        "name": "Фотоотчёт"
+    }
+},
+{
+    "model": "business.hectarepatronagebonus",
+    "pk": 3,
+    "fields": {
+        "order": 3,
+        "name": "Знак в офис"
+    }
+},
+{
+    "model": "business.hectarepatronage",
+    "pk": 1,
+    "fields": {
+        "hectares": 1,
+        "price_in_thousands": 25,
+        "summary": "Идеальный вариант для первого шага в экологичной ответственности. Небольшой участок — ощутимый вклад в будущее.",
+        "bonuses": [
+            1
+        ]
+    }
+},
+{
+    "model": "business.hectarepatronage",
+    "pk": 2,
+    "fields": {
+        "hectares": 10,
+        "price_in_thousands": 180,
+        "summary": "Это масштабнее, чем просто участие: ваш вклад заметно меняет  весь ландшафт. Для компаний, которые растут вместе с природой.",
+        "bonuses": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "business.hectarepatronage",
+    "pk": 3,
+    "fields": {
+        "hectares": 100,
+        "price_in_thousands": 2300,
+        "summary": "Знак серьёзной экологической миссии. Ваш участок — это большая экосистема, которую вы сохраняете для поколений.",
+        "bonuses": [
+            1,
+            2,
+            3
+        ]
+    }
+}
 ]
