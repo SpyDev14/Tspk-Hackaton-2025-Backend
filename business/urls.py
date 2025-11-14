@@ -5,7 +5,7 @@ from business import views
 from business.api.views import SaplingsCalculatorViewSet
 
 api_router = DefaultRouter()
-api_router.register('calculator', SaplingsCalculatorViewSet, basename='calculator')
+api_router.register('patronage/<int:hectares>/', SaplingsCalculatorViewSet, basename='patronage')
 
 # Формат name: modelname-type
 urlpatterns = [

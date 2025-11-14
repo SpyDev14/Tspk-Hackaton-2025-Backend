@@ -62,6 +62,7 @@ INSTALLED_APPS = [
 	'django.contrib.sites',
 
 	# Libs
+	'rest_framework',
 	## Models
 	'solo',
 	'mptt',
@@ -162,12 +163,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static'
-# STATICFILES_DIRS = [
-# 	BASE_DIR / "static",
-# ]
+
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-IMAGES_ROOT = MEDIA_ROOT / 'images'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

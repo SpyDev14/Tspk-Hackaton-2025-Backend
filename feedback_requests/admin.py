@@ -18,13 +18,14 @@ class FeedbackRequestAdmin(ModelAdmin):
 	actions = [make_export_to_excel_action(
 		"Заявки",
 		add_date_to_name = True,
-		set_ordering = ('created_at')
+		formatters = {'seen': lambda x: '✅' if x else '❌'}
+		# set_ordering = ('created_at',)
 	)]
 	list_display = ('__str__', 'phone_number', 'seen', 'created_at')
 	list_filter = (
 		('created_at', DateRangeFilter),
 	)
-	sortable_by = ('created_at', )
-	ordering = ('-created_at', )
+	sortable_by = ('created_at', 'seen')
+	list_filter = ('seen',)
 
 registrator.register()

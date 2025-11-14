@@ -11,7 +11,7 @@ class HectarePatronageBonus(UniqueNamedModel, OrderedModel):
 
 class HectarePatronageManager(models.Manager):
 	def prefetched(self):
-		self.prefetch_related('bonuses')
+		return self.prefetch_related('bonuses')
 
 class HectarePatronage(models.Model):
 	# Без дробной
@@ -21,6 +21,8 @@ class HectarePatronage(models.Model):
 		default=25, validators=[MinValueValidator(1)])
 	bonuses = models.ManyToManyField(HectarePatronageBonus, verbose_name='Бонусы')
 	summary = models.TextField('Краткое описание', max_length=256)
+
+	objects: HectarePatronageManager = HectarePatronageManager()
 
 	class Meta:
 		ordering = ['hectares']

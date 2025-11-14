@@ -87,12 +87,9 @@ def send_new_request_notification_by_telegram(sender, instance: FeedbackRequest,
 
 	# TODO: Сделать через regex
 	to: list[str] = BusinessConfig.get_solo().new_feedback_requests_receiver_emails.replace(' ', '').replace('\n', '').replace('\t', '').split(',')
-	send_mail(
+	if send_mail(
 		subject=f'Новая заявка от: {instance.created_at.strftime('%d/%m/%Y, %H:%M:%S')}',
 		message=message,
 		from_email='noreply@mysite.com',
 		recipient_list = to,
-		# html_message=True,
-	)
-
-	instance.mark_as_seen()
+	) > 0: instance.mark_as_seen()

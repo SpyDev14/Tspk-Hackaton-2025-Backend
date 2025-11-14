@@ -11,5 +11,7 @@ class HomePageView(FeedbackRequestFormMixin, PageWithFormView):
 	def get_context_data(self, **kwargs):
 		return super().get_context_data(
 			last_articles = models.Article.objects.published()[:5],
+			hectare_patronage = models.HectarePatronage.objects.prefetched(),
+			services = models.Service.objects.all(),
 			**kwargs
 		)

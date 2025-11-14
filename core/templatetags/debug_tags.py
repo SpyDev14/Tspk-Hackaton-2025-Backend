@@ -1,5 +1,6 @@
 from django.utils.safestring 	import mark_safe
 from django.utils.html 			import escape
+from django.db.models 			import QuerySet
 from django.template 			import RequestContext, Library
 
 from shared.reflection import typename
@@ -23,6 +24,8 @@ def current_context(context: RequestContext):
 			return format_dict(obj, depth + 1)
 		elif isinstance(obj, (list, tuple, set)):
 			return format_list(obj, depth + 1)
+		elif isinstance(obj, QuerySet):
+			return format_list(tuple(obj), depth + 1)
 		else:
 			return format_basic_type(obj)
 

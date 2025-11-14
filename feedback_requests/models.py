@@ -18,6 +18,7 @@ class FeedbackRequest(models.Model):
 	created_at = models.DateTimeField("Дата заполнения заявки", auto_now_add = True)
 
 	class Meta:
+		ordering = ['-created_at']
 		verbose_name = 'Заявка на обратную связь'
 		verbose_name_plural = 'Заявки на обратную связь'
 
