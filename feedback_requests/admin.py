@@ -23,9 +23,9 @@ class FeedbackRequestAdmin(ModelAdmin):
 	)]
 	list_display = ('__str__', 'phone_number', 'seen', 'created_at')
 	list_filter = (
+		'seen',
 		('created_at', DateRangeFilter),
 	)
 	sortable_by = ('created_at', 'seen')
-	list_filter = ('seen',)
 
 registrator.register()
